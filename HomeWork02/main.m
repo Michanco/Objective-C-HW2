@@ -20,7 +20,10 @@ int main(int argc, const char * argv[]) {
         Rectangle *rectangle = [[Rectangle alloc] initHW:2 width:3];
         Circle *circle = [[Circle alloc] initRadius: 3];
         Triangle *triangle = [[Triangle alloc] initSideA:3 sideB:4 sideC:5];
-        Figure[] 
+        NSArray *array = @[rectangle, circle, triangle];
+        for (Figure *figure in array) {
+            [figure figureInformation];
+        }
         
     }
     return 0;
